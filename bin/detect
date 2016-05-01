@@ -3,4 +3,5 @@
 set -e
 
 # We can handly any application.
+echo "expose-sha"
 exit 0
