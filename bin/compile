@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 # Usage: bin/compile <build-dir> <cache-dir> <env-dir>
 
 env_dir=$3
