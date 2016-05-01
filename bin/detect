@@ -2,8 +2,5 @@
 # bin/detect <build-dir>
 set -e
 
-if test -f "$build/Godeps/Godeps.json" ||
-
-else
-  exit 1
-fi
+# We can handly any application.
+exit 0

@@ -1,2 +1,9 @@
 #!/bin/env bash
 # Usage: bin/compile <build-dir> <cache-dir> <env-dir>
+
+env_dir=$3
+if [ -d "$env_dir" ]; then
+    export "SHA=$(cat $env_dir/SOURCE_VERSION)"
+else
+    echo "No env dir found"
+fi
