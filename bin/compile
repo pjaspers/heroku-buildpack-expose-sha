@@ -4,7 +4,8 @@
 env_dir=$3
 echo $SOURCE_VERSION
 if [ -d "$env_dir" ]; then
-    export "SHA=$SOURCE_VERSION"
+    echo "Exporting SHA=$SOURCE_VERSION"
+    export SHA=$SOURCE_VERSION
 else
     echo "No env dir found"
 fi
