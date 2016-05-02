@@ -5,4 +5,5 @@ env_dir=$3
 
 mkdir -p "$build_dir/.profile.d"
 echo "Creating: $build_dir/.profile.d/expose-sha.sh with $SOURCE_VERSION"
-echo $SOURCE_VERSION >> "$build_dir/.profile.d/expose-sha.sh"
+# Override if not set the SHA
+echo "export SHA=${SHA:-$SOURCE_VERSION}" >> "$build_dir/.profile.d/expose-sha.sh"
