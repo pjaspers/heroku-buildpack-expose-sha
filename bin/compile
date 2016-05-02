@@ -2,6 +2,7 @@
 # Usage: bin/compile <build-dir> <cache-dir> <env-dir>
 
 env_dir=$3
+ls -las $env_dir
 if [ -d "$env_dir" ]; then
     export "SHA=$(cat $env_dir/SOURCE_VERSION)"
 else
