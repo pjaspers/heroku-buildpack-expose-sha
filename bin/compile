@@ -1,11 +1,8 @@
 #!/usr/bin/env bash
 # Usage: bin/compile <build-dir> <cache-dir> <env-dir>
-
+build_dir=$1
 env_dir=$3
-echo $SOURCE_VERSION
-if [ -d "$env_dir" ]; then
-    echo "Exporting SHA=$SOURCE_VERSION"
-    export SHA=$SOURCE_VERSION
-else
-    echo "No env dir found"
-fi
+
+mkdir -p "$build_dir/.profile.d"
+echo "Creating: $build_dir/.profile.d/expose-sha.sh with $SOURCE_VERSION"
+echo $SOURCE_VERSION >> "$build_dir/.profile.d/expose-sha.sh"
